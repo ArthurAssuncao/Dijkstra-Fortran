@@ -1,11 +1,23 @@
 program dijstra
+    ! exemplo de uso: ./a.out matriz-100.dat 1 60
     integer, dimension(:,:), allocatable :: matrix
     integer, dimension(:), allocatable :: caminho
-    integer :: i, j, cont, ordem, max_cont, argc, origem, atual, destino, menor
-    integer :: estado_entrada, erro_leitura
-    character(18), parameter :: NOME_ARQUIVO_MENOR = "matriz_pequena.dat"
-    character(14), parameter :: NOME_ARQUIVO_TESTE = "matriz-100.dat"
-    character(2000) :: bife  ! buffer para leitura do arquivo
+    integer :: i
+    integer :: j
+    integer :: cont
+    integer :: ordem
+    integer :: max_cont
+    integer :: argc
+    integer :: origem
+    integer :: atual
+    integer :: destino
+    integer :: menor
+    integer :: estado_entrada
+    integer :: erro_leitura
+    character(18), parameter :: NOME_ARQUIVO_MENOR = "matriz_pequena.dat"  ! pode apagar
+    character(14), parameter :: NOME_ARQUIVO_TESTE = "matriz-100.dat"  ! pode apagar
+    character(255) :: nome_arquivo
+    character(2000) :: bife  ! buffer para leitura do arquivo (file?!!)
     character(7) :: buffer_argv  ! buffer para pegar os argumentos 
     integer, parameter :: ID_ARQUIVO = 110592
     integer, parameter :: INFINITO = 1000000  ! quem disse que nao da para saber quanto eh infinito?
@@ -21,28 +33,30 @@ program dijstra
     TYPE(No), dimension(:), allocatable :: nos
     TYPE(No), parameter :: NO_NULO = No(INFINITO, -1, FALSE)
     
-    print *,'Instituo Federal do Sudeste de Minas Gerais'
+    print *,'Instituo Federal de Educacao, Ciencia e Tecnologia do Sudeste de Minas Gerais'
     print *,'Curso Tecnologia em Sistemas para Internet'
     print *,'Aluno: Arthur Assuncao'
     print *,'TCP e Roteamento'
-    print *,'Algoritmo Dijkstra em Fortran'
+    print *,'Algoritmo Dijkstra em Fortran 95'
     print *,''
     
     ! Pega os argumentos origem e destino
     argc = iargc()
-    if(argc .lt. 2) then  !tem que ter dois arguentos
+    if(argc .lt. 2) then  !tem que ter dois argumentos
         print *, 'Falta argumento'
         return
     end if
-    ! le o primeiro argumento, a origem
-    call getarg(1, buffer_argv)
-    read(buffer_argv, '(i10)') origem
-    ! le o segundo argumento, o destino
+    ! le o primeiro argumento, o endereco do arquivo da matriz
+    call getarg(1, nome_arquivo)
+    ! le o segundo argumento, a origem
     call getarg(2, buffer_argv)
+    read(buffer_argv, '(i10)') origem
+    ! le o terceiro argumento, o destino
+    call getarg(3, buffer_argv)
     read(buffer_argv, '(i10)') destino
     
     ! le a matriz
-    open(unit=ID_ARQUIVO, file=NOME_ARQUIVO_TESTE, status='old', iostat=estado_entrada, access='sequential', form='formatted')
+    open(unit=ID_ARQUIVO, file=nome_arquivo, status='old', iostat=estado_entrada, access='sequential', form='formatted')
     read(ID_ARQUIVO, '(A)'), bife
     ! lendo a primeira linha
     cont = 0
@@ -63,7 +77,7 @@ program dijstra
             exit
         end if
     end do
-    print *,'matrix de ordem: ', ordem
+    print *,'matriz de ordem: ', ordem
     cont = cont - 1
     ! verifica se origem e destino sao validos
     if(origem .gt. ordem .or. destino .gt. ordem) then
