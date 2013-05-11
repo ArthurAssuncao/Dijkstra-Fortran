@@ -1,17 +1,18 @@
 program dijstra
     integer, dimension(:,:), allocatable :: matrix
     integer, dimension(:), allocatable :: caminho
-    integer :: i, j, cont, ordem, max_cont, origem, atual, destino, menor
+    integer :: i, j, cont, ordem, max_cont, argc, origem, atual, destino, menor
     integer :: estado_entrada, erro_leitura
     character(18), parameter :: NOME_ARQUIVO_MENOR = "matriz_pequena.dat"
     character(14), parameter :: NOME_ARQUIVO_TESTE = "matriz-100.dat"
-    character(2000) :: bife
+    character(2000) :: bife  ! buffer para leitura do arquivo
+    character(7) :: buffer_argv  ! buffer para pegar os argumentos 
     integer, parameter :: ID_ARQUIVO = 110592
-    integer, parameter :: INFINITO = 1000000 ! quem disse que nao da para saber quanto eh infinito?
+    integer, parameter :: INFINITO = 1000000  ! quem disse que nao da para saber quanto eh infinito?
     integer, parameter :: FALSE = 0
     integer, parameter :: TRUE = 1
     
-    TYPE :: No ! Tipo assim, um No
+    TYPE :: No  ! Tipo assim, um No
         integer :: distancia
         integer :: antecessor
         integer :: processado
@@ -27,20 +28,36 @@ program dijstra
     print *,'Algoritmo Dijkstra em Fortran'
     print *,''
     
+    ! Pega os argumentos origem e destino
+    argc = iargc()
+    if(argc .lt. 2) then  !tem que ter dois arguentos
+        print *, 'Falta argumento'
+        return
+    end if
+    ! le o primeiro argumento, a origem
+    call getarg(1, buffer_argv)
+    read(buffer_argv, '(i10)') origem
+    ! le o segundo argumento, o destino
+    call getarg(2, buffer_argv)
+    read(buffer_argv, '(i10)') destino
+    
+    ! le a matriz
     open(unit=ID_ARQUIVO, file=NOME_ARQUIVO_TESTE, status='old', iostat=estado_entrada, access='sequential', form='formatted')
     read(ID_ARQUIVO, '(A)'), bife
     ! lendo a primeira linha
     cont = 0
     if(bife(1:1) .ne. ' ') then
-        ordem = 1 !comeca com numero
+        ordem = 1  !comeca com numero
     else
-        ordem = 0 !comeca com espaco
+        ordem = 0  !comeca com espaco
     end if
+    ! pega o tamanho da linha
     max_cont = len(trim(bife))
+    ! conta o numero de numeros da primeira linha, por ser uma matriz quadrada este valor representa o numero de linhas do arquivo, assim linha x coluna temos a ordem da matriz
     do
         cont = cont + 1
         if(bife(cont:cont) .eq. ' ' .and. bife(cont+1:cont+1) .ne. ' ') then
-            ordem = ordem + 1
+            ordem = ordem + 1  ! eh, tem mais numero
         end if
         if(cont > max_cont) then
             exit
@@ -48,18 +65,25 @@ program dijstra
     end do
     print *,'matrix de ordem: ', ordem
     cont = cont - 1
+    ! verifica se origem e destino sao validos
+    if(origem .gt. ordem .or. destino .gt. ordem) then
+        print *,'origem ou destino invalido'
+        return
+    end if
+    ! aloca espaco para a matriz
     allocate(matrix(ordem, ordem))
+    ! volta para a primeira linha do arquivo
     rewind(ID_ARQUIVO)
+    ! le a p*rra toda
     read(ID_ARQUIVO, *) matrix
     
     print *,''
-    !write(*,*) matrix
+    ! fecha o arquivo
     close(ID_ARQUIVO)
     
     ! dijkstra is coming
-    origem = 1 ! pegar como argumento
-    destino = 9
-    menor = INFINITO !menor caminho
+    menor = INFINITO !menor caminho o.O
+    ! aloca N Nos, onde N eh ordem
     allocate(nos(ordem))
     nos = NO_NULO ! inicializa todo o vetor de nos
     
@@ -75,7 +99,6 @@ program dijstra
 					nos(i)%distancia = nos(atual)%distancia + matrix(atual, i)
 				end if
 			end if
-		!2 continue
 		end do
 		menor = INFINITO
 		do i = 1,ordem
@@ -83,7 +106,6 @@ program dijstra
 				menor = nos(i)%distancia
 				atual = i
 			end if
-		!3 continue
 		end do
 		nos(atual)%processado = TRUE
     end do
@@ -99,13 +121,14 @@ program dijstra
 	j = 1
 	allocate(caminho(ordem))
 	caminho = -1 ! inicia tudo com 0
+	! constroe o caminho
 	do while (atual .ne. -1)
     	caminho(j) = atual
 		atual = nos(atual)%antecessor
 		j = j + 1
 	end do
 	j = j - 1
-	print *,'Caminho: ', caminho(5:1:-1)
+	print *,'Caminho: ', caminho(j:1:-1)  ! notacao, no minimo, exotica para inverter o vetor
     
 end program dijstra
 
