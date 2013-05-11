@@ -33,7 +33,7 @@ program dijstra
     TYPE(No), dimension(:), allocatable :: nos
     TYPE(No), parameter :: NO_NULO = No(INFINITO, -1, FALSE)
     
-    print *,'Instituo Federal de Educacao, Ciencia e Tecnologia do Sudeste de Minas Gerais'
+    print *,'Instituto Federal de Educacao, Ciencia e Tecnologia do Sudeste de Minas Gerais'
     print *,'Curso Tecnologia em Sistemas para Internet'
     print *,'Aluno: Arthur Assuncao'
     print *,'TCP e Roteamento'
@@ -42,7 +42,7 @@ program dijstra
     
     ! Pega os argumentos origem e destino
     argc = iargc()
-    if(argc .lt. 2) then  !tem que ter dois argumentos
+    if(argc .lt. 3) then  !tem que ter dois argumentos
         print *, 'Falta argumento'
         return
     end if
