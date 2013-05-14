@@ -53,29 +53,36 @@ program dijstra
     ! le o terceiro argumento, o destino
     call getarg(3, buffer_argv)
     read(buffer_argv, '(i8)') destino
+    ordem = -1
+    if(argc .eq. 4) then  ! tem a ordem
+        call getarg(4, buffer_argv)
+        read(buffer_argv, '(i8)') ordem 
+    end if
     
     ! le a matriz
     open(unit=ID_ARQUIVO, file=nome_arquivo, status='old', iostat=estado_entrada, access='sequential', form='formatted')
     read(ID_ARQUIVO, '(A)'), bife
-    ! lendo a primeira linha
-    cont = 0
-    if(bife(1:1) .ne. ' ') then
-        ordem = 1  !comeca com numero
-    else
-        ordem = 0  !comeca com espaco
+    if(ordem .eq. -1) then
+        ! lendo a primeira linha
+        cont = 0
+        if(bife(1:1) .ne. ' ') then
+            ordem = 1  !comeca com numero
+        else
+            ordem = 0  !comeca com espaco
+        end if
+        ! pega o tamanho da linha
+        max_cont = len_trim(bife)
+        ! conta o numero de numeros da primeira linha, por ser uma matriz quadrada este valor representa o numero de linhas do arquivo, assim linha x coluna temos a ordem da matriz
+        do
+            cont = cont + 1
+            if(bife(cont:cont) .eq. ' ' .and. bife(cont+1:cont+1) .ne. ' ') then
+                ordem = ordem + 1  ! eh, tem mais numero
+            end if
+            if(cont > max_cont) then
+                exit
+            end if
+        end do
     end if
-    ! pega o tamanho da linha
-    max_cont = len_trim(bife)
-    ! conta o numero de numeros da primeira linha, por ser uma matriz quadrada este valor representa o numero de linhas do arquivo, assim linha x coluna temos a ordem da matriz
-    do
-        cont = cont + 1
-        if(bife(cont:cont) .eq. ' ' .and. bife(cont+1:cont+1) .ne. ' ') then
-            ordem = ordem + 1  ! eh, tem mais numero
-        end if
-        if(cont > max_cont) then
-            exit
-        end if
-    end do
     print '(A,i4)','matriz de ordem: ', ordem
     cont = cont - 1
     ! verifica se origem e destino sao validos
