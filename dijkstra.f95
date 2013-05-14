@@ -145,6 +145,7 @@ program dijstra
 	j = j - 1
 	print *,'Caminho: ', caminho(j:1:-1)  ! notacao, no minimo, exotica para inverter o vetor
     deallocate(caminho)
+    deallocate(nos)
     
 end program dijstra
 
