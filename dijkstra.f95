@@ -31,12 +31,12 @@ program dijstra
     TYPE(No), dimension(:), allocatable :: nos
     TYPE(No), parameter :: NO_NULO = No(INFINITO, -1, FALSE)
     
-    print *,'Instituto Federal de Educacao, Ciencia e Tecnologia do Sudeste de Minas Gerais'
-    print *,'Curso Tecnologia em Sistemas para Internet'
-    print *,'Aluno: Arthur Assuncao'
-    print *,'TCP e Roteamento'
-    print *,'Algoritmo Dijkstra em Fortran 95'
-    print *,''
+    !print *,'Instituto Federal de Educacao, Ciencia e Tecnologia do Sudeste de Minas Gerais'
+    !print *,'Curso Tecnologia em Sistemas para Internet'
+    !print *,'Aluno: Arthur Assuncao'
+    !print *,'TCP e Roteamento'
+    !print *,'Algoritmo Dijkstra em Fortran 95'
+    !print *,''
     
     ! Pega os argumentos origem e destino
     argc = iargc()
@@ -64,7 +64,7 @@ program dijstra
         ordem = 0  !comeca com espaco
     end if
     ! pega o tamanho da linha
-    max_cont = len(trim(bife))
+    max_cont = len_trim(bife)
     ! conta o numero de numeros da primeira linha, por ser uma matriz quadrada este valor representa o numero de linhas do arquivo, assim linha x coluna temos a ordem da matriz
     do
         cont = cont + 1
@@ -75,7 +75,7 @@ program dijstra
             exit
         end if
     end do
-    print *,'matriz de ordem: ', ordem
+    print '(A,i4)','matriz de ordem: ', ordem
     cont = cont - 1
     ! verifica se origem e destino sao validos
     if(origem .gt. ordem .or. destino .gt. ordem) then
@@ -89,7 +89,7 @@ program dijstra
     ! le a p*rra toda
     read(ID_ARQUIVO, *) matrix
     
-    print *,''
+    !print *,''
     ! fecha o arquivo
     close(ID_ARQUIVO)
     
@@ -124,10 +124,10 @@ program dijstra
     deallocate(matrix)
     
     ! resultados
-    print *,''
-	print *,'Origem: ', origem
-	print *,'Destino: ', destino
-	print *,'Custo: ', nos(destino)%distancia
+    !print *,''
+	print '(A,i4)','Origem: ', origem
+	print '(A,i4)','Destino: ', destino
+	print '(A,i4)','Custo: ', nos(destino)%distancia
 
     ! construindo o caminho
 	atual = destino
