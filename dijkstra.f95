@@ -50,10 +50,10 @@ program dijstra
     call getarg(1, nome_arquivo)
     ! le o segundo argumento, a origem
     call getarg(2, buffer_argv)
-    read(buffer_argv, '(i10)') origem
+    read(buffer_argv, '(i8)') origem
     ! le o terceiro argumento, o destino
     call getarg(3, buffer_argv)
-    read(buffer_argv, '(i10)') destino
+    read(buffer_argv, '(i8)') destino
     
     ! le a matriz
     open(unit=ID_ARQUIVO, file=nome_arquivo, status='old', iostat=estado_entrada, access='sequential', form='formatted')
@@ -123,6 +123,7 @@ program dijstra
 		end do
 		nos(atual)%processado = TRUE
     end do
+    deallocate(matrix)
     
     ! resultados
     print *,''
@@ -143,6 +144,7 @@ program dijstra
 	end do
 	j = j - 1
 	print *,'Caminho: ', caminho(j:1:-1)  ! notacao, no minimo, exotica para inverter o vetor
+    deallocate(caminho)
     
 end program dijstra
 
