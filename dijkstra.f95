@@ -1,4 +1,5 @@
 program dijstra
+    implicit none  ! evitar erro com antigas versoes do fortran
     ! exemplo de uso: ./a.out matriz-100.dat 1 60
     integer, dimension(:,:), allocatable :: matrix
     integer, dimension(:), allocatable :: caminho
@@ -103,6 +104,7 @@ program dijstra
     
     ! buscando o menor caminho
     atual = origem
+    j = 0
     do while (atual .ne. destino)
         do i = 1,ordem
             if (matrix(atual, i) .ne. 0 .and. nos(i)%processado .ne. TRUE) then
@@ -113,12 +115,15 @@ program dijstra
 			end if
 		end do
 		menor = INFINITO
+        j = 0
 		do i = 1,ordem
 		    if (nos(i)%processado .eq. FALSE .and. nos(i)%distancia .lt. menor) then
 				menor = nos(i)%distancia
 				atual = i
+                j = i
 			end if
 		end do
+        if(j .eq. 0) exit  ! se o J continua 0 eh pq o No esta isolado
 		nos(atual)%processado = TRUE
     end do
     deallocate(matrix)
@@ -146,4 +151,5 @@ program dijstra
     deallocate(nos)
     
 end program dijstra
+
 
