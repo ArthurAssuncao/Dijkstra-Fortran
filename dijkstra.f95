@@ -14,8 +14,6 @@ program dijstra
     integer :: menor
     integer :: estado_entrada
     integer :: erro_leitura
-    character(18), parameter :: NOME_ARQUIVO_MENOR = "matriz_pequena.dat"  ! pode apagar
-    character(14), parameter :: NOME_ARQUIVO_TESTE = "matriz-100.dat"  ! pode apagar
     character(255) :: nome_arquivo
     character(2000) :: bife  ! buffer para leitura do arquivo (file?!!)
     character(7) :: buffer_argv  ! buffer para pegar os argumentos 
