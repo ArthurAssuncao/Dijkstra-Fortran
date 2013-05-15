@@ -1,6 +1,6 @@
 #!/bin/bash
-tam=150
-matriz="matriz-212.dat"
+tam=$2
+matriz=$1
 for i in $(seq $tam); do
     for j in $(seq $tam); do
         echo $matriz' '$i' '$j
