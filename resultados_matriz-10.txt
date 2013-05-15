@@ -1,0 +1,700 @@
+matriz-10.dat 1 1
+matriz de ordem:   10
+Origem:    1
+Destino:    1
+Custo:    0
+ Caminho:            1
+________________________________
+matriz-10.dat 1 2
+matriz de ordem:   10
+Origem:    1
+Destino:    2
+Custo:  413
+ Caminho:            1           2
+________________________________
+matriz-10.dat 1 3
+matriz de ordem:   10
+Origem:    1
+Destino:    3
+Custo:  791
+ Caminho:            1           5           3
+________________________________
+matriz-10.dat 1 4
+matriz de ordem:   10
+Origem:    1
+Destino:    4
+Custo:  605
+ Caminho:            1           9           4
+________________________________
+matriz-10.dat 1 5
+matriz de ordem:   10
+Origem:    1
+Destino:    5
+Custo:  442
+ Caminho:            1           5
+________________________________
+matriz-10.dat 1 6
+matriz de ordem:   10
+Origem:    1
+Destino:    6
+Custo:  825
+ Caminho:            1           5           6
+________________________________
+matriz-10.dat 1 7
+matriz de ordem:   10
+Origem:    1
+Destino:    7
+Custo:   61
+ Caminho:            1           7
+________________________________
+matriz-10.dat 1 8
+matriz de ordem:   10
+Origem:    1
+Destino:    8
+Custo:  547
+ Caminho:            1           7           8
+________________________________
+matriz-10.dat 1 9
+matriz de ordem:   10
+Origem:    1
+Destino:    9
+Custo:  381
+ Caminho:            1           9
+________________________________
+matriz-10.dat 1 10
+matriz de ordem:   10
+Origem:    1
+Destino:   10
+Custo:  261
+ Caminho:            1          10
+________________________________
+matriz-10.dat 2 1
+matriz de ordem:   10
+Origem:    2
+Destino:    1
+Custo:  413
+ Caminho:            2           1
+________________________________
+matriz-10.dat 2 2
+matriz de ordem:   10
+Origem:    2
+Destino:    2
+Custo:    0
+ Caminho:            2
+________________________________
+matriz-10.dat 2 3
+matriz de ordem:   10
+Origem:    2
+Destino:    3
+Custo:  404
+ Caminho:            2           3
+________________________________
+matriz-10.dat 2 4
+matriz de ordem:   10
+Origem:    2
+Destino:    4
+Custo:  559
+ Caminho:            2           5           4
+________________________________
+matriz-10.dat 2 5
+matriz de ordem:   10
+Origem:    2
+Destino:    5
+Custo:  272
+ Caminho:            2           5
+________________________________
+matriz-10.dat 2 6
+matriz de ordem:   10
+Origem:    2
+Destino:    6
+Custo:  435
+ Caminho:            2           6
+________________________________
+matriz-10.dat 2 7
+matriz de ordem:   10
+Origem:    2
+Destino:    7
+Custo:  406
+ Caminho:            2           7
+________________________________
+matriz-10.dat 2 8
+matriz de ordem:   10
+Origem:    2
+Destino:    8
+Custo:  660
+ Caminho:            2           9           8
+________________________________
+matriz-10.dat 2 9
+matriz de ordem:   10
+Origem:    2
+Destino:    9
+Custo:  415
+ Caminho:            2           9
+________________________________
+matriz-10.dat 2 10
+matriz de ordem:   10
+Origem:    2
+Destino:   10
+Custo:  434
+ Caminho:            2          10
+________________________________
+matriz-10.dat 3 1
+matriz de ordem:   10
+Origem:    3
+Destino:    1
+Custo:  791
+ Caminho:            3           5           1
+________________________________
+matriz-10.dat 3 2
+matriz de ordem:   10
+Origem:    3
+Destino:    2
+Custo:  404
+ Caminho:            3           2
+________________________________
+matriz-10.dat 3 3
+matriz de ordem:   10
+Origem:    3
+Destino:    3
+Custo:    0
+ Caminho:            3
+________________________________
+matriz-10.dat 3 4
+matriz de ordem:   10
+Origem:    3
+Destino:    4
+Custo:  636
+ Caminho:            3           5           4
+________________________________
+matriz-10.dat 3 5
+matriz de ordem:   10
+Origem:    3
+Destino:    5
+Custo:  349
+ Caminho:            3           5
+________________________________
+matriz-10.dat 3 6
+matriz de ordem:   10
+Origem:    3
+Destino:    6
+Custo:   35
+ Caminho:            3           6
+________________________________
+matriz-10.dat 3 7
+matriz de ordem:   10
+Origem:    3
+Destino:    7
+Custo:  748
+ Caminho:            3           5           7
+________________________________
+matriz-10.dat 3 8
+matriz de ordem:   10
+Origem:    3
+Destino:    8
+Custo:  769
+ Caminho:            3           5           8
+________________________________
+matriz-10.dat 3 9
+matriz de ordem:   10
+Origem:    3
+Destino:    9
+Custo:  544
+ Caminho:            3           5           9
+________________________________
+matriz-10.dat 3 10
+matriz de ordem:   10
+Origem:    3
+Destino:   10
+Custo:  642
+ Caminho:            3           5          10
+________________________________
+matriz-10.dat 4 1
+matriz de ordem:   10
+Origem:    4
+Destino:    1
+Custo:  605
+ Caminho:            4           9           1
+________________________________
+matriz-10.dat 4 2
+matriz de ordem:   10
+Origem:    4
+Destino:    2
+Custo:  559
+ Caminho:            4           5           2
+________________________________
+matriz-10.dat 4 3
+matriz de ordem:   10
+Origem:    4
+Destino:    3
+Custo:  636
+ Caminho:            4           5           3
+________________________________
+matriz-10.dat 4 4
+matriz de ordem:   10
+Origem:    4
+Destino:    4
+Custo:    0
+ Caminho:            4
+________________________________
+matriz-10.dat 4 5
+matriz de ordem:   10
+Origem:    4
+Destino:    5
+Custo:  287
+ Caminho:            4           5
+________________________________
+matriz-10.dat 4 6
+matriz de ordem:   10
+Origem:    4
+Destino:    6
+Custo:  670
+ Caminho:            4           5           6
+________________________________
+matriz-10.dat 4 7
+matriz de ordem:   10
+Origem:    4
+Destino:    7
+Custo:  547
+ Caminho:            4           9           7
+________________________________
+matriz-10.dat 4 8
+matriz de ordem:   10
+Origem:    4
+Destino:    8
+Custo:  231
+ Caminho:            4           8
+________________________________
+matriz-10.dat 4 9
+matriz de ordem:   10
+Origem:    4
+Destino:    9
+Custo:  224
+ Caminho:            4           9
+________________________________
+matriz-10.dat 4 10
+matriz de ordem:   10
+Origem:    4
+Destino:   10
+Custo:  356
+ Caminho:            4          10
+________________________________
+matriz-10.dat 5 1
+matriz de ordem:   10
+Origem:    5
+Destino:    1
+Custo:  442
+ Caminho:            5           1
+________________________________
+matriz-10.dat 5 2
+matriz de ordem:   10
+Origem:    5
+Destino:    2
+Custo:  272
+ Caminho:            5           2
+________________________________
+matriz-10.dat 5 3
+matriz de ordem:   10
+Origem:    5
+Destino:    3
+Custo:  349
+ Caminho:            5           3
+________________________________
+matriz-10.dat 5 4
+matriz de ordem:   10
+Origem:    5
+Destino:    4
+Custo:  287
+ Caminho:            5           4
+________________________________
+matriz-10.dat 5 5
+matriz de ordem:   10
+Origem:    5
+Destino:    5
+Custo:    0
+ Caminho:            5
+________________________________
+matriz-10.dat 5 6
+matriz de ordem:   10
+Origem:    5
+Destino:    6
+Custo:  383
+ Caminho:            5           6
+________________________________
+matriz-10.dat 5 7
+matriz de ordem:   10
+Origem:    5
+Destino:    7
+Custo:  399
+ Caminho:            5           7
+________________________________
+matriz-10.dat 5 8
+matriz de ordem:   10
+Origem:    5
+Destino:    8
+Custo:  420
+ Caminho:            5           8
+________________________________
+matriz-10.dat 5 9
+matriz de ordem:   10
+Origem:    5
+Destino:    9
+Custo:  195
+ Caminho:            5           9
+________________________________
+matriz-10.dat 5 10
+matriz de ordem:   10
+Origem:    5
+Destino:   10
+Custo:  293
+ Caminho:            5          10
+________________________________
+matriz-10.dat 6 1
+matriz de ordem:   10
+Origem:    6
+Destino:    1
+Custo:  825
+ Caminho:            6           5           1
+________________________________
+matriz-10.dat 6 2
+matriz de ordem:   10
+Origem:    6
+Destino:    2
+Custo:  435
+ Caminho:            6           2
+________________________________
+matriz-10.dat 6 3
+matriz de ordem:   10
+Origem:    6
+Destino:    3
+Custo:   35
+ Caminho:            6           3
+________________________________
+matriz-10.dat 6 4
+matriz de ordem:   10
+Origem:    6
+Destino:    4
+Custo:  670
+ Caminho:            6           5           4
+________________________________
+matriz-10.dat 6 5
+matriz de ordem:   10
+Origem:    6
+Destino:    5
+Custo:  383
+ Caminho:            6           5
+________________________________
+matriz-10.dat 6 6
+matriz de ordem:   10
+Origem:    6
+Destino:    6
+Custo:    0
+ Caminho:            6
+________________________________
+matriz-10.dat 6 7
+matriz de ordem:   10
+Origem:    6
+Destino:    7
+Custo:  782
+ Caminho:            6           5           7
+________________________________
+matriz-10.dat 6 8
+matriz de ordem:   10
+Origem:    6
+Destino:    8
+Custo:  803
+ Caminho:            6           5           8
+________________________________
+matriz-10.dat 6 9
+matriz de ordem:   10
+Origem:    6
+Destino:    9
+Custo:  578
+ Caminho:            6           5           9
+________________________________
+matriz-10.dat 6 10
+matriz de ordem:   10
+Origem:    6
+Destino:   10
+Custo:  676
+ Caminho:            6           5          10
+________________________________
+matriz-10.dat 7 1
+matriz de ordem:   10
+Origem:    7
+Destino:    1
+Custo:   61
+ Caminho:            7           1
+________________________________
+matriz-10.dat 7 2
+matriz de ordem:   10
+Origem:    7
+Destino:    2
+Custo:  406
+ Caminho:            7           2
+________________________________
+matriz-10.dat 7 3
+matriz de ordem:   10
+Origem:    7
+Destino:    3
+Custo:  748
+ Caminho:            7           5           3
+________________________________
+matriz-10.dat 7 4
+matriz de ordem:   10
+Origem:    7
+Destino:    4
+Custo:  547
+ Caminho:            7           9           4
+________________________________
+matriz-10.dat 7 5
+matriz de ordem:   10
+Origem:    7
+Destino:    5
+Custo:  399
+ Caminho:            7           5
+________________________________
+matriz-10.dat 7 6
+matriz de ordem:   10
+Origem:    7
+Destino:    6
+Custo:  782
+ Caminho:            7           5           6
+________________________________
+matriz-10.dat 7 7
+matriz de ordem:   10
+Origem:    7
+Destino:    7
+Custo:    0
+ Caminho:            7
+________________________________
+matriz-10.dat 7 8
+matriz de ordem:   10
+Origem:    7
+Destino:    8
+Custo:  486
+ Caminho:            7           8
+________________________________
+matriz-10.dat 7 9
+matriz de ordem:   10
+Origem:    7
+Destino:    9
+Custo:  323
+ Caminho:            7           9
+________________________________
+matriz-10.dat 7 10
+matriz de ordem:   10
+Origem:    7
+Destino:   10
+Custo:  201
+ Caminho:            7          10
+________________________________
+matriz-10.dat 8 1
+matriz de ordem:   10
+Origem:    8
+Destino:    1
+Custo:  547
+ Caminho:            8           7           1
+________________________________
+matriz-10.dat 8 2
+matriz de ordem:   10
+Origem:    8
+Destino:    2
+Custo:  660
+ Caminho:            8           9           2
+________________________________
+matriz-10.dat 8 3
+matriz de ordem:   10
+Origem:    8
+Destino:    3
+Custo:  769
+ Caminho:            8           5           3
+________________________________
+matriz-10.dat 8 4
+matriz de ordem:   10
+Origem:    8
+Destino:    4
+Custo:  231
+ Caminho:            8           4
+________________________________
+matriz-10.dat 8 5
+matriz de ordem:   10
+Origem:    8
+Destino:    5
+Custo:  420
+ Caminho:            8           5
+________________________________
+matriz-10.dat 8 6
+matriz de ordem:   10
+Origem:    8
+Destino:    6
+Custo:  803
+ Caminho:            8           5           6
+________________________________
+matriz-10.dat 8 7
+matriz de ordem:   10
+Origem:    8
+Destino:    7
+Custo:  486
+ Caminho:            8           7
+________________________________
+matriz-10.dat 8 8
+matriz de ordem:   10
+Origem:    8
+Destino:    8
+Custo:    0
+ Caminho:            8
+________________________________
+matriz-10.dat 8 9
+matriz de ordem:   10
+Origem:    8
+Destino:    9
+Custo:  245
+ Caminho:            8           9
+________________________________
+matriz-10.dat 8 10
+matriz de ordem:   10
+Origem:    8
+Destino:   10
+Custo:  291
+ Caminho:            8          10
+________________________________
+matriz-10.dat 9 1
+matriz de ordem:   10
+Origem:    9
+Destino:    1
+Custo:  381
+ Caminho:            9           1
+________________________________
+matriz-10.dat 9 2
+matriz de ordem:   10
+Origem:    9
+Destino:    2
+Custo:  415
+ Caminho:            9           2
+________________________________
+matriz-10.dat 9 3
+matriz de ordem:   10
+Origem:    9
+Destino:    3
+Custo:  544
+ Caminho:            9           5           3
+________________________________
+matriz-10.dat 9 4
+matriz de ordem:   10
+Origem:    9
+Destino:    4
+Custo:  224
+ Caminho:            9           4
+________________________________
+matriz-10.dat 9 5
+matriz de ordem:   10
+Origem:    9
+Destino:    5
+Custo:  195
+ Caminho:            9           5
+________________________________
+matriz-10.dat 9 6
+matriz de ordem:   10
+Origem:    9
+Destino:    6
+Custo:  578
+ Caminho:            9           5           6
+________________________________
+matriz-10.dat 9 7
+matriz de ordem:   10
+Origem:    9
+Destino:    7
+Custo:  323
+ Caminho:            9           7
+________________________________
+matriz-10.dat 9 8
+matriz de ordem:   10
+Origem:    9
+Destino:    8
+Custo:  245
+ Caminho:            9           8
+________________________________
+matriz-10.dat 9 9
+matriz de ordem:   10
+Origem:    9
+Destino:    9
+Custo:    0
+ Caminho:            9
+________________________________
+matriz-10.dat 9 10
+matriz de ordem:   10
+Origem:    9
+Destino:   10
+Custo:  141
+ Caminho:            9          10
+________________________________
+matriz-10.dat 10 1
+matriz de ordem:   10
+Origem:   10
+Destino:    1
+Custo:  261
+ Caminho:           10           1
+________________________________
+matriz-10.dat 10 2
+matriz de ordem:   10
+Origem:   10
+Destino:    2
+Custo:  434
+ Caminho:           10           2
+________________________________
+matriz-10.dat 10 3
+matriz de ordem:   10
+Origem:   10
+Destino:    3
+Custo:  642
+ Caminho:           10           5           3
+________________________________
+matriz-10.dat 10 4
+matriz de ordem:   10
+Origem:   10
+Destino:    4
+Custo:  356
+ Caminho:           10           4
+________________________________
+matriz-10.dat 10 5
+matriz de ordem:   10
+Origem:   10
+Destino:    5
+Custo:  293
+ Caminho:           10           5
+________________________________
+matriz-10.dat 10 6
+matriz de ordem:   10
+Origem:   10
+Destino:    6
+Custo:  676
+ Caminho:           10           5           6
+________________________________
+matriz-10.dat 10 7
+matriz de ordem:   10
+Origem:   10
+Destino:    7
+Custo:  201
+ Caminho:           10           7
+________________________________
+matriz-10.dat 10 8
+matriz de ordem:   10
+Origem:   10
+Destino:    8
+Custo:  291
+ Caminho:           10           8
+________________________________
+matriz-10.dat 10 9
+matriz de ordem:   10
+Origem:   10
+Destino:    9
+Custo:  141
+ Caminho:           10           9
+________________________________
+matriz-10.dat 10 10
+matriz de ordem:   10
+Origem:   10
+Destino:   10
+Custo:    0
+ Caminho:           10
+________________________________
