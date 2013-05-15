@@ -1,6 +1,6 @@
-program dijstra
+program dijkstra
     implicit none  ! evitar erro com antigas versoes do fortran
-    ! exemplo de uso: ./a.out matriz-100.dat 1 60
+    ! exemplo de uso: ./a.out matriz-212.dat 1 60
     integer, dimension(:,:), allocatable :: matrix
     integer, dimension(:), allocatable :: caminho
     integer :: i
@@ -157,6 +157,6 @@ program dijstra
     deallocate(caminho)
     deallocate(nos)
     
-end program dijstra
+end program dijkstra
 
 
